@@ -32,10 +32,10 @@ function PostsDAO(db) {
         // hw3.2 TODO
         posts.save(post,function(err,post){
 			if(err){
-				throw err;
+				console.log(err);
 			}
 			console.dir("Post inserted!\n" + post);
-			
+			callback(err,permalink);
 		});
     }
 
